@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const tail = function (tailArr) {
+const tail = function(tailArr) {
   let newArr = [];
   //loop threw each element an add to new array expect 0 position.
   for (let i = 0; i < tailArr.length; i++) {
@@ -17,7 +17,6 @@ const tail = function (tailArr) {
   }
   return newArr;
 };
-
 
 // TESTING
 const words = ["Yo Yo", "Lighthouse", "Labs"];
