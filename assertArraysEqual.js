@@ -18,11 +18,12 @@ const eqArrays = function(compArray1, compArray2) {
   return currentTest;
 };
 
-const assertArraysEquals = function(ray1, ray2) {
-  eqArrays(ray1, ray2) === true ? console.log(`✅Assertion Passed: ${ray1} === ${ray2}`): console.log(`🤢Assertion Failed: ${ray1} !== ${ray2}`);
+const assertArraysEqual = function(ray1, ray2) {
+  // If eqArray true. Passed, or if false Failed.
+  eqArrays(ray1, ray2) ? console.log(`✅Assertion Passed: ${ray1} === ${ray2}`): console.log(`🤢Assertion Failed: ${ray1} !== ${ray2}`);
 };
 
 //test 
 
-assertArraysEquals([1,2,3],[1,2,3]);
-assertArraysEquals([1,2,2],[1,2,3]);
+assertArraysEqual([1,2,3],[1,2,3]);
+assertArraysEqual([1,2,2],[1,2,3]);
