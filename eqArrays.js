@@ -8,11 +8,21 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(compArray1, compArray2) {
-// loop through both arrays and compare idividual array steps.
-  let currentTest = false;
-  for (i = 0; i < compArray1.length; i++) {
-    if (compArray1[i] === compArray2[i]){
-      currentTest = true;
+  //Default false
+  let currentTest;
+
+  // Auto fail if not same length
+  if (compArray1.length !== compArray2.length) {
+    currentTest = false;
+  } else {
+    // Loop and compare each member of both arrays.
+    for (i = 0; i < compArray1.length; i++) {
+      // if same var becomes true else falses
+      if (compArray1[i] === compArray2[i]){
+        currentTest = true;
+      } else {
+        currentTest = false;
+      }
     }
   }
   return currentTest;
@@ -20,6 +30,10 @@ const eqArrays = function(compArray1, compArray2) {
 
 
 
-
 // TEST CODE
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 2]), true);
+
+// check length if they aren't same auto fail
+// Check if false too
+// more test cases of course
