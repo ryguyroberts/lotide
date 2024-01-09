@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(compArray1, compArray2) {
-  //Default false
+  //Default true
   let currentTest = true;
 
   // Auto fail if not same length
