@@ -18,9 +18,7 @@ const eqArrays = function(compArray1, compArray2) {
     // Loop and compare each member of both arrays.
     for (let i = 0; i < compArray1.length; i++) {
       // if same var becomes true else falses
-      if (compArray1[i] === compArray2[i]) {
-        currentTest = true;
-      } else {
+      if (compArray1[i] !== compArray2[i]) {
         currentTest = false;
         break;
       }
