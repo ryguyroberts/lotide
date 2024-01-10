@@ -9,12 +9,13 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(str) {
   let returnObj = {};
-  const noSpaceString = str.split(" ").join("").toLowerCase();
+  // remove spaces
+  const noSpaceString = str.split(" ").join("");
   for (let letter of noSpaceString) {
+    //Increment by 1 if it exists. Or just make it 1 the first time.
     returnObj[letter] = returnObj[letter] + 1 || 1;
   }
    return returnObj;
 };
 
-console.log(assertEqual(countLetters("lighthouse in the house"),{l: 1, i: 2, g: 1, h: 4, t: 2, o: 2, u: 2, s: 2, e: 3, n: 1}));
 
