@@ -9,13 +9,17 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(str) {
   let returnObj = {};
-  // remove spaces
-  const noSpaceString = str.split(" ").join("");
-  for (let letter of noSpaceString) {
-    //Increment by 1 if it exists. Or just make it 1 the first time.
-    returnObj[letter] = returnObj[letter] + 1 || 1;
+  for (let letter of str) {
+    // if space skip
+    if(letter !== " ") {
+      // Adds 1 or sets to 1 if first encounter.
+      returnObj[letter] = returnObj[letter] + 1 || 1;
+    }
   }
    return returnObj;
 };
 
 
+const result1 = countLetters('LHL');
+assertEqual(result1['L'], 2);
+assertEqual(result1['H'], 1);
