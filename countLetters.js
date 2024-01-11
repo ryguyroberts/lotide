@@ -13,7 +13,11 @@ const countLetters = function(str) {
     // if space skip
     if(letter !== " ") {
       // Adds 1 or sets to 1 if first encounter.
-      returnObj[letter] = returnObj[letter] + 1 || 1;
+      if(returnObj[letter]) {
+        returnObj[letter] += 1;
+      } else {
+        returnObj[letter] = 1;
+      }
     }
   }
    return returnObj;
@@ -23,3 +27,7 @@ const countLetters = function(str) {
 const result1 = countLetters('LHL');
 assertEqual(result1['L'], 2);
 assertEqual(result1['H'], 1);
+
+const result2 = countLetters('Lighthouse Bananas');
+assertEqual(result2['a'], 3);
+assertEqual(result2['B'], 1);
