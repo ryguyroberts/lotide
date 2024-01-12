@@ -4,7 +4,7 @@ const eqArrays = function(compArray1, compArray2) {
 
   // Auto fail if not same length
   if (compArray1.length !== compArray2.length) {
-    currentTest = false;
+    currentTest = false; // Could return false instead
   } else {
     // Loop and compare each member of both arrays.
     for (let i = 0; i < compArray1.length; i++) {
