@@ -23,19 +23,32 @@ const assertArraysEqual = function(ray1, ray2) {
   eqArrays(ray1, ray2) ? console.log(`✅Assertion Passed: ${ray1} === ${ray2}`) : console.log(`🤢Assertion Failed: ${ray1} !== ${ray2}`);
 };
 
-const map = function(array, callback) {
-  const results = [];
-  for (let item of array) {
-    results.push(callback(item));
+
+
+const takeUntil = function(array, callback) {
+  const returnArray = [];
+  for (let value of array) {
+    // if not the value were looking for push to new Array
+    if (!callback(value)) {
+      returnArray.push(value);
+    } else {
+      // If it is the value just break we done.
+      break;
+    }
   }
-  return results;
+  return returnArray;
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const results1 = takeUntil(data1, x => x < 0);
+console.log(results1);
 
-const results1 = map(words, word => word[0]);
-const results2 = map(words, word => word[1]);
+console.log('---');
+
+const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+const results2 = takeUntil(data2, x => x === ',');
+console.log(results2);
 
 
-assertArraysEqual(results1,['g','c','t','m','t']);
-assertArraysEqual(results2,['r','o','o','a','o']);
+assertArraysEqual(results1,[ 1, 2, 5, 7, 2 ]);
+assertArraysEqual(results2,["I've", 'been', 'to', 'Hollywood']);
