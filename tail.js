@@ -1,12 +1,7 @@
-// Loop through each element except index 0 and add to new array.
+//splice starting at index 1;
 const tail = function(tailArray) {
-  const returnArray = [];
-  for (const key in tailArray) {
-    if (key > 0) {
-      returnArray.push(tailArray[key]);
-    }
-  }
+  const returnArray = tailArray.slice(1)
   return returnArray;
-};
+}
 
 module.exports = tail;
