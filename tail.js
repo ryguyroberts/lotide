@@ -1,7 +1,10 @@
-//splice starting at index 1;
+//splice starting at index
 const tail = function(tailArray) {
-  const returnArray = tailArray.slice(1)
-  return returnArray;
-}
+  let returnArray = [];
+  if (tailArray.length === 0) {
+    return returnArray;
+  }
+  return returnArray = tailArray.slice(1);
+};
 
 module.exports = tail;
