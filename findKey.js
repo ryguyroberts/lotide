@@ -21,7 +21,7 @@ const data1 = {
 const findKey = function(objInput, callback) {
   // Create array of keys
   let keyArr = Object.keys(objInput);
-  for (let key of keyArr) { ;
+  for (let key of keyArr) { 
     if(callback(objInput[key])) {
       return key;
     } 
