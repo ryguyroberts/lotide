@@ -1,6 +1,6 @@
-const assertEqual = require('../assertEqual');
+const _ = require('../index');
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1,1);
-assertEqual(2,3);
+_.assertEqual("Lighthouse Labs", "Bootcamp");
+_.assertEqual("Lighthouse Labs", "Lighthouse Labs");
+_.assertEqual(1,1);
+_.assertEqual(2,3);
