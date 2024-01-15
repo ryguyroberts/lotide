@@ -1,11 +1,18 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-// TESTING
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-assertEqual(tail(words).length, 2);
-assertEqual(tail(words).length, 3); //Should fail
-assertEqual(words.length, 3); // original array should still have 3 elements!
-assertEqual(tail(words)[0], "Lighthouse") // first element of returned array should be second element of argument array
-assertEqual(tail(["test"]).length, 0); // tail of array with one element only should be empty
-assertEqual(tail([]).length, 0); // tail of an empty array should also be empty
+
+describe("#tail", () => {
+  it("returns [2, 3] for [1, 2, 3]", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+  it("first element of returned array should be second element of argument array", () => {
+    assert.strictEqual(tail([1, 2, 3])[0], 2);
+  });
+  it("tail of array with one element returns empty array", () => {
+    assert.deepEqual(tail([1]), []);
+  });
+  it("tail of an emptry array should return an empy array", () => {
+    assert.deepEqual(tail([]), []);
+  });
+});
