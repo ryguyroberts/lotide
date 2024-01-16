@@ -12,7 +12,7 @@ const eqObjects = function(object1, object2) {
     } else {
       if (object1[key] !== object2[key]) {
         return false;
-      } 
+      }
     }
     
   }
