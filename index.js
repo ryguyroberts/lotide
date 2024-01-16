@@ -6,7 +6,7 @@ const countLetters = require('./countLetters')
 const countOnly = require('./countOnly');
 const letterPositions = require('./letterPositions');
 const findKey = require('./findKey');
-// const findKeyByValue = require('./findKeyByValue');
+const findKeyByValue = require('./findKeyByValue');
 // const flatten = require('./flatten');
 // const takeUntil = require('./takeUntil');
 // const without = require('./without');
@@ -24,7 +24,7 @@ module.exports = {
   countOnly,
   letterPositions,
   findKey,
-  // findKeyByValue,
+  findKeyByValue,
   // flatten,
   // takeUntil,
   // without,

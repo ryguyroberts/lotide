@@ -1,7 +1,6 @@
 const _ = require('../index');
 const assert = require('chai').assert;
 
-
 describe("findKey", () => {
   it("for call back equaling 2 stars find noma, for call back equaling 3 stars find Akaleri", () => {
     const data1 = {
