@@ -35,6 +35,7 @@ The following functions are currently implemented:
 * `findKeyByValue(...)`: Finds the name of a key in an object based off a value provided
 * `flatten(...)`: Turns a array with nested arrays into a single level array
 * `takeUntil(...)`: Input values in an array to a new array, until it reaches a provided value
+* `letterPosition(...)`: Take a string and outputs and object with letters and there index position.
 * `without(...)`: Input values into a new array, taking an argument for values to leave out of the new array
 * `assertArraysEqual(...)`: Asserts two arrays are equal
 * `assertEqual(...)`: Assert two values are equal
