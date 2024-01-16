@@ -1,6 +1,6 @@
 {
   "name": "@ryguyroberts/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A student learning project to recreate some of the functions offered by Lodash",
   "main": "index.js",
   "directories": {
